@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- the line below is needed -->
+    <link href="cap-assets/css/cap.default.css" rel="stylesheet">
+    <title>HYSP Data Capture Example</title>
+</head>
+<body>
+    <!-- the lines below are needed -->
+    <div style="max-width:500px;padding:30px">
+        <div id="cap-form">
+            <form class="cap-form-class" id="hyspcapture" method="post" action="cap-assets/cap.process.php">
+                <div class="field">
+                    <label for="Name" class="label has-text-weight-normal">Fullname</label>
+                    <div class="control">
+                        <input type="text" name="Name" id="Name" class="input is-full-width" maxlength="100"
+                            data-validate-field="Name">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Email" class="label has-text-weight-normal">Email</label>
+                    <div class="control">
+                        <input type="email" name="Email" id="Email" class="input is-full-width" maxlength="100"
+                            data-validate-field="Email">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Message" class="label has-text-weight-normal">Note</label>
+                    <div class="control">
+                        <textarea name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
+                        data-validate-field="Message"></textarea>
+                    </div>
+                </div>
+                <div id="fcf-status" class="cap-status"></div>
+                <div class="field">
+                    <div class="buttons">
+                        <button id="cap-button" type="submit" class="button is-link is-medium">Send Note</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="fcf-thank-you" style="display:none">
+            <!-- Thank you message goes below -->
+            <strong>We got it!</strong>
+            <p>Thanks for your note.  A reply will be submitted upon review of content.</p>
+            <!-- Thank you message goes above -->
+        </div>
+    </div>
+    <script src="cap-assets/js/cap.just-validate.min.js"></script>
+    <script src="cap-assets/js/cap.form.js"></script>
+    <!-- the lines above are needed -->
+</body>
+</html>
